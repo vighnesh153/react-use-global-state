@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"No tests configured yet.\"",
     "prepare": "husky install",
+    "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx --no-error-on-unmatched-pattern true",
     "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx --no-error-on-unmatched-pattern true"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^6.0.0",
+    "prettier": "^2.4.1",
     "react": "^17.0.2"
   }
 }

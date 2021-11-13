@@ -34,5 +34,11 @@ module.exports = {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": 'off',
     "react/prop-types": 'off',
+    'no-unused-vars': 'warn',
+    'no-underscore-dangle': 'warn',
+    'no-useless-constructor': 'warn',
+    'import/prefer-default-export': 'warn',
+    'max-len': 'warn',
+    'no-empty-function': 'warn',
   },
 };

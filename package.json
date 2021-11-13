@@ -1,13 +1,14 @@
 {
   "name": "@vighnesh153/use-global-state",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A boosted useState implementation to store state globally.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No tests configured yet.\"",
     "prepare": "husky install",
     "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx --no-error-on-unmatched-pattern true",
-    "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx --no-error-on-unmatched-pattern true"
+    "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx --no-error-on-unmatched-pattern true",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "husky": "^6.0.0",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
+    "standard-version": "^9.3.2",
     "typescript": "^4.4.4"
   }
 }

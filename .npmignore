@@ -125,3 +125,10 @@ commitlint.config.js
 .prettierignore
 .eslintignore
 .husky
+.eslintrc.js
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+LICENSE
+README.md
+tsconfig.json
+

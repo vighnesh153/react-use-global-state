@@ -4,7 +4,7 @@
 [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
 [![npm](https://img.shields.io/npm/dt/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
 
-`react-use-global-state` is an extremely lightweight library `< 1KB` that provides a React hook for having a piece of global state. It is similar to the react's `useState` hook but with the only addition that this hook persists the state globally.
+An extremely lightweight library which is less than `1KB` minified that provides a React hook for having a piece of global state. It is similar to the react's `useState` hook but with the only addition that this hook persists the state globally.
 
 This is also an alternative to the popular state management systems like `Redux`, `MobX` or even the built-in `Context API`. We can completely rely on hooks for handling the state for us.
 

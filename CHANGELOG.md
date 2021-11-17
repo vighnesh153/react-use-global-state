@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/vighnesh153/react-use-global-state/compare/v0.1.4...v0.1.5) (2021-11-17)
+
+
+### Bug Fixes
+
+* potential mis-matching-initial-states issue ([3835fc7](https://github.com/vighnesh153/react-use-global-state/commit/3835fc7805675a89d7720521666c74dcb731c63e))
+
 ### [0.1.4](https://github.com/vighnesh153/react-use-global-state/compare/v0.1.3...v0.1.4) (2021-11-17)
 
 ### [0.1.3](https://github.com/vighnesh153/react-use-global-state/compare/v0.1.2...v0.1.3) (2021-11-13)

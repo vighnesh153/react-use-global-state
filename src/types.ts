@@ -4,3 +4,7 @@
 
 export type Callback = () => void;
 export type DataCallback<T> = (data: T) => void;
+
+export type SubscriptionType = {
+  unsubscribe: Callback,
+};

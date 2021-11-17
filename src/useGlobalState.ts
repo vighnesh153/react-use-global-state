@@ -26,13 +26,15 @@ const useGlobalState = <T>(
     getInitialState(identifier) || initialState
   );
 
+  // If stream for the current identifier is not defined, create a new one.
+  // This needs to happen outside of useEffect to avoid multiple useGlobalState references
+  // to same identifier, have their own instance of different state.
+  if (streams[identifier] === undefined) {
+    streams[identifier] = new Stream<T>(state);
+  }
+
   // Create a subscription to the stream
   useEffect(() => {
-    // If stream for the current identifier is not defined, create a new one
-    if (streams[identifier] === undefined) {
-      streams[identifier] = new Stream<T>(state);
-    }
-
     // Subscribe to the stream
     const { unsubscribe } = streams[identifier]?.subscribe(setState) || {};
 

@@ -10,6 +10,7 @@ This can be used as an alternative to the popular state management systems like 
 
 ### Pros
 * Size: `1KB` minified
+* Zero external dependencies
 * Hook based instead of the traditional approaches
 * No need of wrapping components with a long chain of Providers as there is no Provider-Consumer pattern in this hook
 

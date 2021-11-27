@@ -1,8 +1,13 @@
 # @vighnesh153/use-global-state
 
 [![npm (scoped)](https://img.shields.io/npm/v/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
+[![Test Coveralls](https://github.com/vighnesh153/react-use-global-state/actions/workflows/coveralls.yml/badge.svg)](https://coveralls.io/github/vighnesh153/react-use-global-state?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/vighnesh153/react-use-global-state/badge.svg?branch=main)](https://coveralls.io/github/vighnesh153/react-use-global-state?branch=main)
 [![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
+[![npm peer dependency version (scoped)](https://img.shields.io/npm/dependency-version/@vighnesh153/use-global-state/peer/react)]()
 [![npm](https://img.shields.io/npm/dt/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
+[![GitHub](https://img.shields.io/github/license/vighnesh153/react-use-global-state)](https://github.com/vighnesh153/react-use-global-state/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/vighnesh153/react-use-global-state)](https://github.com/vighnesh153/react-use-global-state/issues)
 
 An extremely lightweight library which is just `1KB` minified that provides a React hook for having a piece of global state. It is similar to the React's `useState` hook but with the only addition that this hook persists the state globally.
 

@@ -2,6 +2,7 @@ import fs from "fs";
 import babel from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
+import typescript from '@rollup/plugin-typescript';
 
 const pkg = JSON.parse(
   fs.readFileSync("./package.json", { encoding: "utf-8" })
@@ -21,27 +22,19 @@ export default {
       exclude: "node_modules/**",
     }),
     terser(),
+    typescript(),
   ],
   output: [
     {
-      file: pkg.main,
+      file: "dist/use-global-state.cjs.js",
       format: "cjs",
       exports: "default",
       sourcemap: false,
     },
     {
-      file: "dist/use-global-state.es.js",
+      file: pkg.main,
       format: "es",
       sourcemap: false,
-    },
-    {
-      name: "use-global-state",
-      file: "dist/use-global-state.umd.js",
-      format: "umd",
-      sourcemap: false,
-      globals: {
-        react: "react",
-      },
     },
   ],
 };

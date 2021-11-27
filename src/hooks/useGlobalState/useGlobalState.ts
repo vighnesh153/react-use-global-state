@@ -3,7 +3,7 @@
  */
 
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
-import { Stream } from "./streaming";
+import { Stream } from "src/streaming";
 
 // Stores all the streams of data
 const streams: { [id: string]: Stream<any> } = {};

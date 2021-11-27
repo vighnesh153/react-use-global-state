@@ -2,6 +2,6 @@
  * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import { useGlobalState } from "./hooks";
+import useGlobalState from "./useGlobalState";
 
 export default useGlobalState;

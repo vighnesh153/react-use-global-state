@@ -19,7 +19,7 @@ const getInitialState = (id: string) => streams[id]?.getValue();
  */
 const useGlobalState = <T>(
   identifier: string,
-  initialState: T | undefined
+  initialState?: T
 ): [T, Dispatch<SetStateAction<T>>] => {
   // Initialize the state. If value exists in stream, it will be given higher preference than value passed as prop.
   const [state, setState] = useState<T>(
@@ -36,7 +36,7 @@ const useGlobalState = <T>(
   // Create a subscription to the stream
   useEffect(() => {
     // Subscribe to the stream
-    const { unsubscribe } = streams[identifier]?.subscribe(setState) || {};
+    const { unsubscribe } = streams[identifier].subscribe(setState);
 
     // As a clean up, unsubscribe
     return unsubscribe;
@@ -44,7 +44,7 @@ const useGlobalState = <T>(
 
   // Publish the new value to the stream
   useEffect(() => {
-    streams[identifier]?.publish(state);
+    streams[identifier].publish(state);
   }, [state]);
 
   return [state, setState];

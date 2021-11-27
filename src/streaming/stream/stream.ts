@@ -2,8 +2,9 @@
  * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import { DataCallback, SubscriptionType } from '../types';
-import Subscription from './subscription';
+import { DataCallback, SubscriptionType } from 'src/types';
+
+import Subscription from '../subscription';
 
 /**
  * Controls the pub-sub for a particular stream.

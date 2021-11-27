@@ -1,8 +1,8 @@
 /**
- * @author Vighnesh Raut <rvighnes@amazon.com>
+ * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import { Callback, SubscriptionType } from '../types';
+import { Callback, SubscriptionType } from 'src/types';
 
 /**
  * Creates a subscription.
@@ -14,3 +14,4 @@ const Subscription = (id: string, unsubscribe: Callback): SubscriptionType => ({
 });
 
 export default Subscription;
+

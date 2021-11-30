@@ -82,6 +82,8 @@ const useUser = (userId, initialValue) => {
 ## Examples
 * [Counters](https://docs.vighnesh153.com/public/UcrhdVdiPxJ4MHv4yNVG)
 
+![Counters Gif](https://i.imgur.com/hyP7VWe.gif)
+
 ## How does this hook work?
 * This hooks makes use of the provided `identifier` to tap into its global stream.
 * When you change the state for an `identifier`, the new data gets published in the stream and all the components which are making use of that stream, will get the latest data.

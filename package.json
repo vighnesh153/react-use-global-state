@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "prettier:fix": "prettier -w ./src/**/*.ts -w ./src/**/*.tsx --no-error-on-unmatched-pattern true",
     "lint:fix": "eslint --fix ./src/**/*.ts --fix ./src/**/*.tsx --no-error-on-unmatched-pattern true",
-    "release": "rm -rf dist && npm run test && npm run build && standard-version && git push --follow-tags && npm publish --access=public",
+    "release": "npm run test && npm run build && standard-version && git push --follow-tags && npm publish --access=public",
     "lint": "eslint src/*",
     "semantic-release": "semantic-release"
   },

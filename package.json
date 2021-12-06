@@ -1,5 +1,5 @@
 {
-  "name": "react-use-global-hook",
+  "name": "@vighnesh153/use-global-state",
   "version": "1.0.0",
   "description": "A boosted useState implementation to store state globally.",
   "main": "dist/use-global-state.js",

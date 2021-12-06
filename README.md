@@ -13,15 +13,6 @@ An extremely lightweight library which is just `1KB` minified that provides a Re
 
 This can be used as an alternative to the popular state management systems like `Redux`, `MobX` or even the built-in `Context API`. We can completely rely on hooks for handling the state for us.
 
-### Pros
-* Size: `1KB` minified
-* Zero external dependencies
-* Hook based instead of the traditional approaches
-* No need of wrapping components with a long chain of Providers as there is no Provider-Consumer pattern in this hook
-
-### Cons
-* Cannot be used with class-based components. A workaround is to create a functional component wrapper and provide the state as props to the class-based component
-
 ## Installation
 ```bash
 npm install @vighnesh153/use-global-state
@@ -60,6 +51,21 @@ const App = () => {
   );
 };
 ```
+
+## Examples
+* [Counters](https://docs.vighnesh153.com/public/UcrhdVdiPxJ4MHv4yNVG)
+
+![Counters Gif](https://i.imgur.com/hyP7VWe.gif)
+
+### Pros
+* Size: `1KB` minified
+* Zero external dependencies
+* Hook based instead of the traditional approaches
+* No need of wrapping components with a long chain of Providers as there is no Provider-Consumer pattern in this hook
+
+### Cons
+* Cannot be used with class-based components. A workaround is to create a functional component wrapper and provide the state as props to the class-based component
+
 ## Best practices
 * Try to keep the states very minimal. That way, it will be easier to make reusable and won't re-render lot of components just because some random sub-object changed in the state. 
 * Although there is no restriction on how you want to use this, my recommendation would be to create a hook that has all the functionality related to the global state you want to track. This lets you encapsulate all the functionality related to the atomic state and will be easily scalable.
@@ -78,11 +84,6 @@ const useUser = (userId, initialValue) => {
   return { user, changeName, changeAge };
 };
 ```
-
-## Examples
-* [Counters](https://docs.vighnesh153.com/public/UcrhdVdiPxJ4MHv4yNVG)
-
-![Counters Gif](https://i.imgur.com/hyP7VWe.gif)
 
 ## How does this hook work?
 * This hooks makes use of the provided `identifier` to tap into its global stream.

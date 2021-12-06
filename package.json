@@ -1,9 +1,12 @@
 {
-  "name": "@vighnesh153/use-global-state",
+  "name": "react-use-global-hook",
   "version": "0.1.11",
   "description": "A boosted useState implementation to store state globally.",
   "main": "dist/use-global-state.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "cleanup": "rimraf dist",
     "prepublish": "npm run build",

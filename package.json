@@ -1,6 +1,6 @@
 {
   "name": "react-use-global-hook",
-  "version": "0.1.11",
+  "version": "1.0.0",
   "description": "A boosted useState implementation to store state globally.",
   "main": "dist/use-global-state.js",
   "types": "./dist/index.d.ts",

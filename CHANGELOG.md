@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/vighnesh153/react-use-global-state/compare/v1.0.1...v1.2.0) (2021-12-07)
+
+
+### Features
+
+* add stream manager and ability to do cleanup of existing streams ([2611dac](https://github.com/vighnesh153/react-use-global-state/commit/2611dac45a3c2411ade902ad0db0f6ea79af3a8c))
+
+
+### Bug Fixes
+
+* missing exports and imports in files ([d78c924](https://github.com/vighnesh153/react-use-global-state/commit/d78c92480e64cd4145f42e385e6142779e544361))
+* rollup config for module exports ([93a7782](https://github.com/vighnesh153/react-use-global-state/commit/93a7782b85af1eae4d9de2667041e91fd343a1eb))
+
 ## [1.1.0](https://github.com/vighnesh153/react-use-global-state/compare/v1.0.1...v1.1.0) (2021-12-07)
 
 

@@ -28,7 +28,6 @@ export default {
     {
       file: "dist/use-global-state.cjs.js",
       format: "cjs",
-      exports: "default",
       sourcemap: false,
     },
     {

@@ -52,6 +52,21 @@ const App = () => {
 };
 ```
 
+##### Cleaning up for unit testing
+You might want to clean up all the existing streams for your unit 
+test suites. You can make use of the `resetExistingStreams` function 
+to do that.
+
+```tsx
+import { resetExistingStreams } from "@vighnesh153/use-global-state";
+
+describe('Your component tests', () => {
+  beforeEach(() => {
+    resetExistingStreams();
+  });
+});
+```
+
 ## Examples
 * [Counters](https://docs.vighnesh153.com/public/UcrhdVdiPxJ4MHv4yNVG)
 

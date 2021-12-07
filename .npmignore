@@ -128,13 +128,8 @@ commitlint.config.js
 .eslintrc.js
 CHANGELOG.md
 CODE_OF_CONDUCT.md
-LICENSE
-README.md
 tsconfig.json
 .github
 jest.config.ts
-LICENSE
 rollup.config.js
 .babelrc
-package.json
-

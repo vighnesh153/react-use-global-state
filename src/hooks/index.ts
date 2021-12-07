@@ -2,6 +2,6 @@
  * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import useGlobalState from './useGlobalState';
+import useGlobalState, { resetExistingStreams } from './useGlobalState';
 
-export { useGlobalState };
+export { useGlobalState, resetExistingStreams };

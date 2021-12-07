@@ -2,6 +2,7 @@
  * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import { useGlobalState } from "./hooks";
+import { useGlobalState, resetExistingStreams } from "./hooks";
 
+export { resetExistingStreams };
 export default useGlobalState;

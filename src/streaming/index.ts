@@ -3,5 +3,6 @@
  */
 
 import Stream from './stream';
+import StreamsManager from './streams-manager';
 
-export { Stream };
+export { Stream, StreamsManager };

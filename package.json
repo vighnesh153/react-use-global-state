@@ -31,7 +31,15 @@
   "keywords": [
     "global",
     "state",
-    "react"
+    "react",
+    "hook",
+    "state management",
+    "store",
+    "typescript",
+    "publish",
+    "subscribe",
+    "pubsub",
+    "modern"
   ],
   "author": "Vighnesh Raut (vighnesh153)",
   "license": "MIT",

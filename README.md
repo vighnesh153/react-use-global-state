@@ -3,9 +3,9 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
 [![Test Coveralls](https://github.com/vighnesh153/react-use-global-state/actions/workflows/coveralls.yml/badge.svg)](https://coveralls.io/github/vighnesh153/react-use-global-state?branch=main)
 [![Coverage Status](https://coveralls.io/repos/github/vighnesh153/react-use-global-state/badge.svg?branch=main)](https://coveralls.io/github/vighnesh153/react-use-global-state?branch=main)
-[![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
-[![npm peer dependency version (scoped)](https://img.shields.io/npm/dependency-version/@vighnesh153/use-global-state/peer/react)]()
-[![npm](https://img.shields.io/npm/dt/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
+[![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@vighnesh153/use-global-state)](https://img.shields.io/bundlephobia/minzip/@vighnesh153/use-global-state)
+[![npm peer dependency version (scoped)](https://img.shields.io/npm/dependency-version/@vighnesh153/use-global-state/peer/react)](https://www.npmjs.com/package/react)
+[![npm](https://img.shields.io/npm/dt/@vighnesh153/use-global-state)](https://img.shields.io/npm/dt/@vighnesh153/use-global-state)
 [![GitHub](https://img.shields.io/github/license/vighnesh153/react-use-global-state)](https://github.com/vighnesh153/react-use-global-state/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/vighnesh153/react-use-global-state)](https://github.com/vighnesh153/react-use-global-state/issues)
 
@@ -20,21 +20,17 @@ npm install @vighnesh153/use-global-state
 
 ## Usage
 
-```tsx
+```jsx
 import useGlobalState from "@vighnesh153/use-global-state";
 
-const Counter = () => {
+const Counter = ({ adder }) => {
   const [count, setCount] = useGlobalState('count', 0);
-  
-  const addOneToCount = () => {
-    setCount(c => c + 1);
-  };
   
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={addOneToCount}>
-        Add 1
+      <button onClick={() => setCount((c) => c + adder)}>
+        Add {adder}
       </button>
     </div>
   );
@@ -44,9 +40,9 @@ const App = () => {
   return (
     <div>
       {/** Count state will be same for all counters **/}
-      <Counter />
-      <Counter />
-      <Counter />
+      <Counter adder={1} />
+      <Counter adder={2} />
+      <Counter adder={3} />
     </div>
   );
 };
@@ -72,14 +68,11 @@ describe('Your component tests', () => {
 
 ![Counters Gif](https://i.imgur.com/hyP7VWe.gif)
 
-### Pros
+## Why you should use this library?
 * Size: `1KB` minified
 * Zero external dependencies
-* Hook based instead of the traditional approaches
+* Modern hook-based state management instead of the traditional redux like approaches
 * No need of wrapping components with a long chain of Providers as there is no Provider-Consumer pattern in this hook
-
-### Cons
-* Cannot be used with class-based components. A workaround is to create a functional component wrapper and provide the state as props to the class-based component
 
 ## Best practices
 * Try to keep the states very minimal. That way, it will be easier to make reusable and won't re-render lot of components just because some random sub-object changed in the state. 

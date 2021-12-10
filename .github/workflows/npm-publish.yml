@@ -4,9 +4,9 @@
 name: Publish to NPM
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 5,17 * * *'
+  workflow_dispatch
 
 jobs:
   build:

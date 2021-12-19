@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.27](https://github.com/vighnesh153/react-use-global-state/compare/v1.2.26...v1.2.27) (2021-12-19)
+
 ### [1.2.26](https://github.com/vighnesh153/react-use-global-state/compare/v1.2.25...v1.2.26) (2021-12-19)
 
 ### [1.2.25](https://github.com/vighnesh153/react-use-global-state/compare/v1.2.24...v1.2.25) (2021-12-18)

@@ -25,11 +25,11 @@ export default {
     typescript(),
   ],
   output: [
-    {
-      file: "dist/use-global-state.cjs.js",
-      format: "cjs",
-      sourcemap: false,
-    },
+    // {
+    //   file: "dist/use-global-state.cjs.js",
+    //   format: "cjs",
+    //   sourcemap: false,
+    // },
     {
       file: pkg.main,
       format: "es",

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.3.0 (2021-12-29)
+
+
+### Features
+
+* remove the cjs output format ([5e01220](https://github.com/vighnesh153/react-use-global-state/commit/5e01220249ccdf75829abcfb03d91dbc84e521b8))
+
 ### [1.2.46](https://github.com/vighnesh153/react-use-global-state/compare/v1.2.45...v1.2.46) (2021-12-29)
 
 ### 1.2.45 (2021-12-28)

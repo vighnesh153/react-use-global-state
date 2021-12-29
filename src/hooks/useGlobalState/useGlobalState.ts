@@ -2,8 +2,9 @@
  * @author Vighnesh Raut <me@vighnesh153.com>
  */
 
-import { Dispatch, SetStateAction, useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { StreamsManager } from "src/streaming";
+import { DataCallback } from "src/types";
 
 // Get the stream manager instance
 const streamsManager = StreamsManager();
@@ -21,10 +22,26 @@ export { resetExistingStreams };
 const useGlobalState = <T>(
   identifier: string,
   initialState?: T
-): [T, Dispatch<SetStateAction<T>>] => {
-  // Initialize the state. If value exists in stream, it will be given higher preference than value passed as prop.
+): [T, DataCallback<T>] => {
+  // Initialize the state. If value exists in stream, it will be given higher
+  // preference than value passed as prop.
   const [state, setState] = useState<T>(
     streamsManager.getInitialState(identifier) || initialState
+  );
+
+  // This function will be exposed to the outside world to update the state.
+  // Reason: Regular setState also supports passing a callback, which has an
+  // argument that holds the latest piece of state. As this hook will be
+  // instantiated in different components, each component will have it's only
+  // instance of setState. So, when a new state update is in transit, different
+  // components might get the update at different intervals. Hence, we cannot
+  // support the callback currently.
+  //
+  // To have the callback to update the state, this hook will need some
+  // internal-architectural changes. Added it to backlog.
+  const updateState = useCallback(
+    (newState: T): void => setState(newState),
+    []
   );
 
   // Create a new stream if it doesn't exist.
@@ -47,7 +64,7 @@ const useGlobalState = <T>(
     streamsManager.publish(identifier, state);
   }, [state]);
 
-  return [state, setState];
+  return [state, updateState];
 };
 
 export default useGlobalState;

@@ -29,7 +29,7 @@ const Counter = ({ adder }) => {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount((c) => c + adder)}>
+      <button onClick={() => setCount(count + adder)}>
         Add {adder}
       </button>
     </div>
@@ -81,13 +81,13 @@ describe('Your component tests', () => {
 const useUser = (userId, initialValue) => {
   const [user, setUser] = useGlobalState(`user_${userId}`, initialValue || {});
   
-  const changeName = (newName) => {
-    setUser(u => ({ ...u, name: newName }));
-  };
+  const changeName = useCallback((newName) => {
+    setUser({ ...user, name: newName });
+  }, [user]);
 
-  const changeAge = (newAge) => {
-    setUser(u => ({ ...u, age: newAge }));
-  };
+  const changeAge = useCallback((newAge) => {
+    setUser({ ...user, age: newAge });
+  }, [user]);
   
   return { user, changeName, changeAge };
 };

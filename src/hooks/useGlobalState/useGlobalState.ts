@@ -32,8 +32,8 @@ const useGlobalState = <T>(
   // This function will be exposed to the outside world to update the state.
   // Reason: Regular setState also supports passing a callback, which has an
   // argument that holds the latest piece of state. As this hook will be
-  // instantiated in different components, each component will have it's only
-  // instance of setState. So, when a new state update is in transit, different
+  // instantiated in different components, each component will have it's own
+  // instance of setState. So, when a state-update is in transit, different
   // components might get the update at different intervals. Hence, we cannot
   // support the callback currently.
   //
@@ -59,7 +59,8 @@ const useGlobalState = <T>(
     return unsubscribe;
   }, [identifier]);
 
-  // Publish the new value to the stream
+  // Publish the new value to the stream, whenever any instance of state is updated
+  // in any component.
   useEffect(() => {
     streamsManager.publish(identifier, state);
   }, [state]);

@@ -24,7 +24,7 @@ const StreamsManager = () => {
     },
 
     // Returns the current value in the stream
-    getInitialState: (identifier: string): any => streams[identifier]?.getValue(),
+    getStreamState: (identifier: string): any => streams[identifier]?.getValue(),
 
     // Publish new data to the stream
     publish: <T>(identifier: string, data: T): void => streams[identifier]?.publish(data),

@@ -31,7 +31,7 @@ describe("StreamsManager tests", () => {
     const streamsManager = StreamsManager();
     const identifier = `${Math.random()}`;
 
-    const data = streamsManager.getInitialState(identifier);
+    const data = streamsManager.getStreamState(identifier);
 
     expect(data).toBeUndefined();
   });
@@ -42,7 +42,7 @@ describe("StreamsManager tests", () => {
     let n: any;
 
     streamsManager.tap(identifier, n as number);
-    const data = streamsManager.getInitialState(identifier);
+    const data = streamsManager.getStreamState(identifier);
 
     expect(data).toBe(undefined);
   });
@@ -52,7 +52,7 @@ describe("StreamsManager tests", () => {
     const identifier = `${Math.random()}`;
 
     streamsManager.tap(identifier, 42);
-    const data = streamsManager.getInitialState(identifier);
+    const data = streamsManager.getStreamState(identifier);
 
     expect(data).toBe(42);
   });

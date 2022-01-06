@@ -26,7 +26,7 @@ const useGlobalState = <T>(
   // Initialize the state. If value exists in stream, it will be given higher
   // preference than value passed as prop.
   const [state, setState] = useState<T>(
-    streamsManager.getInitialState(identifier) || initialState
+    streamsManager.getStreamState(identifier) || initialState
   );
 
   // This function will be exposed to the outside world to update the state.

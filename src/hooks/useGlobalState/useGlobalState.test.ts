@@ -4,7 +4,7 @@
 
 import useGlobalState from "./useGlobalState";
 
-import { act, renderHook, cleanup } from "@testing-library/react-hooks";
+import { act, renderHook, cleanup } from "@testing-library/react";
 
 describe("useGlobalState hook tests", () => {
   beforeEach(cleanup);

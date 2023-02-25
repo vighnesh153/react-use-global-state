@@ -1,3 +1,5 @@
+[DEPRECATED]: PLEASE SWITCH TO `@vighnesh153/react-use-global-state`. REPOSITORY LINK: https://github.com/vighnesh153/vighnesh153-turbo
+
 # @vighnesh153/use-global-state
 
 [![npm (scoped)](https://img.shields.io/npm/v/@vighnesh153/use-global-state)](https://www.npmjs.com/package/@vighnesh153/use-global-state)
